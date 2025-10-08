@@ -1,13 +1,19 @@
 <header class="header">
-    <nav class="header-nav">
-        <div class="brand-logo">
-            <img src="assets/images/Logo_ESPE.png"  class="logo-image" alt="Logo_ESPE" onerror="this.onerror=null; this.src='https://placehold.co/150x150/A78BFA/ffffff?text=Error+Logo';">
-        </div>
-        <ul class="nav-links">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Acerca de</a></li>
-            <li><a href="#">Contacto</a></li>
-        </ul>
-    </nav>
+  <nav class="header-nav" aria-label="Secciones principales">
+    <a class="brand-logo" href="#inicio">
+      <img
+        [src]="logoImage"
+        class="logo-image"
+        [attr.alt]="logoAlt"
+        loading="lazy"
+        decoding="async"
+      />
+    </a>
+    <ul class="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
 </header>

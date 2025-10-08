@@ -1,0 +1,21 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  background: linear-gradient(180deg, #f9fafb 0%, #eef2ff 100%);
+  color: #1a202c;
+}
+
+.page-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+@media (min-width: 768px) {
+  .page-layout {
+    gap: 6rem;
+  }
+}

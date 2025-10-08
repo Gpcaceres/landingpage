@@ -1,12 +1,26 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Body } from './body/body';
+import { ContactModal } from './contact-modal/contact-modal';
+import { Footer } from './footer/footer';
+import { Gallery } from './gallery/gallery';
+import { Header } from './header/header';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [CommonModule, Header, Body, Gallery, Footer, ContactModal],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  protected title = 'LandingPage';
+  protected showContactModal = false;
+
+  protected openContactModal(): void {
+    this.showContactModal = true;
+  }
+
+  protected closeContactModal(): void {
+    this.showContactModal = false;
+  }
 }
