@@ -1,19 +1,57 @@
 <header class="header">
   <nav class="header-nav" aria-label="Secciones principales">
-    <a class="brand-logo" href="#inicio">
-      <img
-        src="assets/images/Logo_ESPE.png"
-        class="logo-image"
-        alt="Logotipo de Germán Cáceres"
-        loading="lazy"
-        decoding="async"
-      />
-    </a>
-    <ul class="nav-links">
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#habilidades">Habilidades</a></li>
-      <li><a href="#proyectos">Proyectos</a></li>
-      <li><a href="#contacto">Contacto</a></li>
+    <div class="brand-area">
+      <a class="brand-logo" href="#inicio">
+        <img
+          [src]="logoImage"
+          class="logo-image"
+          [alt]="logoAlt"
+          loading="lazy"
+          decoding="async"
+        />
+      </a>
+      <button
+        type="button"
+        class="menu-toggle"
+        [attr.aria-expanded]="isMenuOpen"
+        [attr.aria-label]="isMenuOpen ? 'Cerrar menú de navegación' : 'Abrir menú de navegación'"
+        (click)="toggleMenu()"
+      >
+        <span class="sr-only">
+          {{ isMenuOpen ? 'Cerrar menú de navegación' : 'Abrir menú de navegación' }}
+        </span>
+        <svg
+          *ngIf="!isMenuOpen; else closeIcon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path
+            d="M4 6h16M4 12h16M4 18h16"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-width="2"
+          />
+        </svg>
+        <ng-template #closeIcon>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M6 6l12 12M6 18L18 6"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+          </svg>
+        </ng-template>
+      </button>
+    </div>
+    <ul class="nav-links" [class.open]="isMenuOpen">
+      <li><a href="#inicio" (click)="closeMenu()">Inicio</a></li>
+      <li><a href="#habilidades" (click)="closeMenu()">Habilidades</a></li>
+      <li><a href="#proyectos" (click)="closeMenu()">Proyectos</a></li>
+      <li><a href="#contacto" (click)="closeMenu()">Contacto</a></li>
     </ul>
   </nav>
 </header>
