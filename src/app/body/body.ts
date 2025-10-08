@@ -26,7 +26,7 @@ export class Body {
       'En esta página encontrarás información sobre mi experiencia, habilidades técnicas y algunos de los proyectos en los que he participado.'
   };
 
-  protected readonly profileImage = 'assets/images/fotoPerfil.png';
+  protected readonly profileImage = 'assets/images/fotoPerfil.jpg';
 
   protected readonly services: Service[] = [
     {
