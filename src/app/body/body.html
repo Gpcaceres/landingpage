@@ -1,0 +1,78 @@
+<main class="main-content">
+    <section class="hero-section">
+        <h1 class="hero-title animate-fade-in-up">
+            <span class="highlight-text">Bienvenido</span> a mi perfil profesional
+        </h1>
+        <!-- Contenedor para imagen + texto alineados horizontalmente -->
+        <div class="hero-content">
+            <!--
+                ¡Importante! Asegúrate de usar barras inclinadas hacia adelante (/) en la ruta de la imagen,
+                incluso si en tu sistema de archivos usas barras invertidas (\).
+                La ruta correcta para Angular es 'assets/images/nombre-de-tu-imagen.extensión'.
+                El atributo onerror mostrará una imagen de placeholder si la ruta sigue siendo incorrecta.
+            -->
+            <img src="assets/images/fotoPerfil.jpg" alt="Foto de perfil" class="profile-image animate-fade-in-delay" onerror="this.onerror=null; this.src='https://placehold.co/150x150/A78BFA/ffffff?text=Error+Foto';">
+            <p class="hero-description-text animate-fade-in-delay">
+                Hola, soy Germán Cáceres, estudiante de Ingeniería de Software en la Universidad de las Fuerzas Armadas ESPE.
+                Puedes conocer acerca de mi perfil profesional, mis habilidades en el ámbito de software y algunos de mis proyectos en los que he estado involucrado.
+            </p>
+        </div>
+
+        <br>
+        <br>
+        <div class="hero-buttons">
+            <button class="btn-primary">
+                Más Información
+            </button>
+            <button class="btn-secondary" (click)="onContactClick()">
+                Contáctanos
+            </button>
+        </div>
+    </section>
+    <br>
+    <br>
+    <section class="about-section">
+        <h2 class="section-title">
+            Conoce mis habilidades
+        </h2>
+    </section>
+
+    <section class="services-section">
+        <div class="service-card">
+            <h3 class="service-title">
+                <svg class="service-icon text-blue-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                Desarrollo Frontend
+            </h3>
+            <p class="service-description">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                
+            </p>
+        </div>
+        <div class="service-card">
+            <h3 class="service-title">
+                <svg class="service-icon text-green-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                Desarrollo Backend
+            </h3>
+            <p class="service-description">
+                <li>Node.js</li>
+                <li>Express.js</li>
+                <li>Python</li>
+            </p>
+        </div>
+        <div class="service-card">
+            <h3 class="service-title">
+                <svg class="service-icon text-purple-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                Bases de Datos
+            </h3>
+            <p class="service-description">
+               
+                    <li>MySQL</li>
+                    <li>MongoDB</li>
+                    <li>PostgreSQL</li>
+                
+            </p>
+        </div>
+    </section>
+</main>

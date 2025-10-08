@@ -1,0 +1,109 @@
+.header {
+    background: linear-gradient(to right, #0e4a87, #4f46e5); /* from-blue-600 to-indigo-700 */
+    color: #fff;
+    padding: 1.5rem; /* p-6 */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-xl */
+    width: auto; /* w-full */
+}
+
+.header-nav {
+    display: flex;
+    flex-direction: column; /* flex-col */
+    justify-content: space-between;
+    align-items: center;
+    max-width: 72rem; /* max-w-7xl - Ajustado a 72rem para consistencia */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+    .header-nav {
+        flex-direction: row; /* md:flex-row */
+    }
+}
+
+.brand-logo {
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: 800; /* font-extrabold */
+    margin-bottom: 1rem; /* mb-4 */
+    transition: transform 0.3s ease-in-out; /* transition duration-300 ease-in-out */
+    cursor: pointer;
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+    .brand-logo {
+        margin-bottom: 0; /* md:mb-0 */
+    }
+}
+
+.brand-logo:hover {
+    transform: scale(1.05); /* hover:scale-105 */
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column; /* flex-col */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.125rem; /* text-lg */
+    font-weight: 500; /* font-medium */
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+    .nav-links {
+        flex-direction: row; /* md:flex-row */
+        gap: 2rem; /* md:space-x-8 */
+    }
+}
+
+.nav-links li {
+    margin-bottom: 0.75rem; /* space-y-3 */
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+    .nav-links li {
+        margin-bottom: 0; /* md:space-y-0 */
+    }
+}
+
+.nav-links a {
+    color: inherit;
+    text-decoration: none;
+    padding-bottom: 0.25rem; /* pb-1 */
+    border-bottom: 2px solid transparent; /* border-b-2 border-transparent */
+    transition: all 0.3s ease-in-out; /* transition duration-300 ease-in-out */
+}
+
+.nav-links a:hover {
+    color: #bfdbfe; /* hover:text-blue-200 */
+    border-color: #bfdbfe; /* hover:border-blue-200 */
+}
+
+.logo-image {
+    max-width: 80px; /* Tamaño máximo inicial más pequeño para el logo */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Elimina el espacio extra debajo de la imagen */
+    margin: 0 auto; /* Centra la imagen si está en un bloque */
+    border-radius: 0.5rem; /* Bordes ligeramente redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: transform 0.3s ease-in-out; /* Transición suave para efectos de hover */
+}
+
+/* Efecto al pasar el ratón */
+.logo-image:hover {
+    transform: scale(1.05); /* Ligeramente más grande al pasar el ratón */
+}
+
+/* Responsividad: Ajustes para pantallas más grandes */
+@media (min-width: 768px) { /* Para pantallas medianas y superiores */
+    .logo-image {
+        max-width: 100px; /* Un poco más grande en desktop */
+    }
+}
+
+@media (min-width: 1024px) { /* Para pantallas grandes y superiores */
+    .logo-image {
+        max-width: 120px; /* Aún más grande en pantallas muy grandes */
+    }
+}

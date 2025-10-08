@@ -1,0 +1,303 @@
+.main-content {
+    flex-grow: 1;
+    padding: 4rem 1rem; /* Ajustado para más espacio en móvil */
+    background: linear-gradient(to bottom right, #f9fafb, #f3f4f6);
+    width: auto; /* Cambiado de 'auto' a '100%' */
+}
+
+@media (min-width: 640px) { /* sm breakpoint */
+    .main-content {
+        padding: 5rem 2rem; /* Más padding en pantallas pequeñas/medianas */
+    }
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+    .main-content {
+        padding: 6rem 3rem; /* Más padding en pantallas medianas */
+    }
+}
+
+@media (min-width: 1024px) { /* lg breakpoint */
+    .main-content {
+        padding: 7rem 4rem; /* Más padding en pantallas grandes */
+    }
+}
+
+.hero-section {
+    max-width: 72rem; /* Ajustado para un ancho más controlado */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 1rem; /* Ajustado el margen inferior */
+}
+
+.hero-title {
+    font-size: 2.5rem; /* Tamaño base más pequeño para móvil */
+    font-weight: 800;
+    color: #1a202c;
+    margin-bottom: 1rem; /* Ajustado el margen inferior */
+    margin-top: -3rem; /* Ajustado el margen superior */
+    line-height: 1.2; /* Ajustado el line-height */
+    animation: fadeInFromBottom 1s ease-out forwards;
+}
+
+@media (min-width: 640px) { /* sm breakpoint */
+    .hero-title {
+        font-size: 3.5rem;
+    }
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+    .hero-title {
+        font-size: 4.5rem;
+    }
+}
+
+@media (min-width: 1024px) { /* lg breakpoint */
+    .hero-title {
+        font-size: 5rem; /* text-6xl */
+    }
+}
+
+.highlight-text {
+    color: #2563eb;
+}
+
+/* Contenedor para imagen + texto alineados horizontalmente */
+.hero-content {
+    display: flex;
+    flex-direction: column; /* Por defecto en móvil, apila verticalmente */
+    align-items: center; /* Centra horizontalmente en columna */
+    text-align: center; /* Centra el texto */
+    margin-bottom: 1rem; /* Espacio debajo del contenido principal */
+    max-width: 42rem; /* Ancho máximo para el contenido */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 640px) { /* sm breakpoint */
+    .hero-content {
+        flex-direction: row; /* En pantallas más grandes, alinea en fila */
+        text-align: left; /* Alinea el texto a la izquierda */
+        justify-content: center; /* Centra el contenido horizontalmente */
+        align-items: flex-start; /* Alinea los elementos al inicio (arriba) */
+        gap: 1.5rem; /* Espacio entre la imagen y el texto */
+    }
+}
+
+/* Estilo para la imagen de perfil */
+.profile-image {
+    width: 150px; /* Tamaño fijo para la imagen */
+    height: 150px;
+    border-radius: 50%; /* Hace la imagen circular */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsión */
+    margin-bottom: 1.5rem; /* Espacio debajo de la imagen en móvil */
+    border: 4px solid #2563eb; /* Borde alrededor de la imagen */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    animation: fadeInFromBottom 1s ease-out 0.5s forwards; /* Animación de entrada */
+    opacity: 0; /* Asegura que el elemento esté oculto antes de la animación */
+}
+
+@media (min-width: 640px) { /* sm breakpoint */
+    .profile-image {
+        margin-bottom: 0; /* Elimina el margen inferior cuando está en fila */
+        margin-right: 1.5rem; /* Espacio a la derecha de la imagen cuando está en fila */
+    }
+}
+
+/* Estilo para el texto de la descripción, ahora separado de la imagen */
+.hero-description-text {
+    font-size: 1rem; /* Tamaño base más pequeño para móvil */
+    color: #4a5568;
+    line-height: 1.6;
+    animation: fadeInFromBottom 1s ease-out 0.5s forwards; /* Animación de entrada */
+    opacity: 0; /* Asegura que el elemento esté oculto antes de la animación */
+    flex: 1; /* Permite que el texto ocupe el espacio restante */
+}
+
+@media (min-width: 640px) { /* sm breakpoint */
+    .hero-description-text {
+        font-size: 1.125rem;
+    }
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+    .hero-description-text {
+        font-size: 1.25rem; /* text-xl */
+    }
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem; /* Ajustado el gap */
+}
+
+@media (min-width: 640px) { /* sm breakpoint */
+    .hero-buttons {
+        flex-direction: row;
+        gap: 1.5rem; /* gap-6 */
+    }
+}
+
+.btn-primary, .btn-secondary {
+    font-weight: 700;
+    padding: 0.875rem 2rem; /* Ajustado el padding */
+    border-radius: 9999px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease-in-out;
+    transform: scale(1);
+    outline: none;
+    cursor: pointer;
+}
+
+@media (min-width: 640px) { /* sm breakpoint */
+    .btn-primary, .btn-secondary {
+        padding: 1rem 2.5rem; /* py-4 px-10 */
+    }
+}
+
+.btn-primary {
+    background-color: #2563eb;
+    color: #fff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.btn-primary:focus {
+    box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.5);
+}
+
+.btn-secondary {
+    background-color: #fff;
+    border: 2px solid #2563eb;
+    color: #2563eb;
+}
+
+.btn-secondary:hover {
+    background-color: #eff6ff;
+    color: #1d4ed8;
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.btn-secondary:focus {
+    box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.5);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 1.5rem;
+    animation: fadeInFromBottom 1s ease-out forwards;
+    text-align: center;
+}
+
+.services-section {
+    max-width: 72rem; /* Ajustado para un ancho más controlado */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem; /* Reducido el margen inferior para reducir espacio con la galería */
+    margin-top: 4rem; /* Ajustado el margen superior */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem; /* Ajustado el gap */
+}
+
+@media (min-width: 640px) { /* sm breakpoint */
+    .services-section {
+        gap: 2rem; /* Ajustado el gap */
+    }
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+    .services-section {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 5rem; /* mt-20 */
+    }
+}
+
+@media (min-width: 1024px) { /* lg breakpoint */
+    .services-section {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem; /* gap-10 */
+    }
+}
+
+.service-card {
+    background-color: #fff;
+    padding: 1.5rem; /* Ajustado el padding */
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease-in-out;
+    transform: translateY(0);
+    border: 1px solid #e2e8f0;
+}
+
+@media (min-width: 640px) { /* sm breakpoint */
+    .service-card {
+        padding: 2rem; /* p-8 */
+    }
+}
+
+.service-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    transform: translateY(-0.5rem);
+}
+
+.service-title {
+    font-size: 1.5rem; /* Tamaño base más pequeño para móvil */
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 0.75rem; /* Ajustado el margen inferior */
+    display: flex;
+    align-items: center;
+}
+
+@media (min-width: 640px) { /* sm breakpoint */
+    .service-title {
+        font-size: 1.75rem;
+    }
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+    .service-title {
+        font-size: 1.875rem; /* text-3xl */
+    }
+}
+
+.service-icon {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.75rem;
+}
+
+.service-description {
+    color: #4a5568;
+    line-height: 1.625;
+    font-size: 0.9375rem; /* Tamaño base más pequeño para móvil */
+}
+
+@media (min-width: 640px) { /* sm breakpoint */
+    .service-description {
+        font-size: 1rem;
+    }
+}
+
+@keyframes fadeInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
