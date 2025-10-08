@@ -20,4 +20,14 @@ describe('Body', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should emit openContact when the contact button is clicked', () => {
+    spyOn(component.openContact, 'emit');
+
+    const button: HTMLButtonElement | null = fixture.nativeElement.querySelector('.btn.btn-secondary');
+    expect(button).not.toBeNull();
+    button?.click();
+
+    expect(component.openContact.emit).toHaveBeenCalled();
+  });
 });

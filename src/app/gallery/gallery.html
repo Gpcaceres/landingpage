@@ -1,65 +1,29 @@
-<section class="gallery-section">
-    <h2 class="gallery-title">Nuestra Galería de Proyectos</h2>
-    <div class="gallery-grid">
-        <div class="gallery-item">
-            <img src="https://placehold.co/300/A78BFA/ffffff?text=Proyecto+Web" alt="Imagen de la Galería 1" class="gallery-image">
-            <div class="gallery-overlay">
-                <span class="gallery-overlay-text">Ver Proyecto</span>
-            </div>
-            <div class="gallery-info">
-                <h3 class="gallery-info-title">Proyecto Web Moderno</h3>
-                <p class="gallery-info-description">Desarrollo de una aplicación web responsiva.</p>
-            </div>
-        </div>
-        <div class="gallery-item">
-            <img src="https://placehold.co/300/60A5FA/ffffff?text=App+Movil" alt="Imagen de la Galería 2" class="gallery-image">
-            <div class="gallery-overlay">
-                <span class="gallery-overlay-text">Ver Proyecto</span>
-            </div>
-            <div class="gallery-info">
-                <h3 class="gallery-info-title">Aplicación Móvil Intuitiva</h3>
-                <p class="gallery-info-description">Diseño y desarrollo de UX/UI para iOS y Android.</p>
-            </div>
-        </div>
-        <div class="gallery-item">
-            <img src="https://placehold.co/300/34D399/ffffff?text=Diseño+Grafico" alt="Imagen de la Galería 3" class="gallery-image">
-            <div class="gallery-overlay">
-                <span class="gallery-overlay-text">Ver Proyecto</span>
-            </div>
-            <div class="gallery-info">
-                <h3 class="gallery-info-title">Identidad de Marca Creativa</h3>
-                <p class="gallery-info-description">Creación de logotipos y material gráfico.</p>
-            </div>
-        </div>
-        <div class="gallery-item">
-            <img src="https://placehold.co/300/FCD34D/ffffff?text=E-commerce" alt="Imagen de la Galería 4" class="gallery-image">
-            <div class="gallery-overlay">
-                <span class="gallery-overlay-text">Ver Proyecto</span>
-            </div>
-            <div class="gallery-info">
-                <h3 class="gallery-info-title">Plataforma E-commerce</h3>
-                <p class="gallery-info-description">Solución de comercio electrónico robusta.</p>
-            </div>
-        </div>
-        <div class="gallery-item">
-            <img src="https://placehold.co/300/FB923C/ffffff?text=Analitica" alt="Imagen de la Galería 5" class="gallery-image">
-            <div class="gallery-overlay">
-                <span class="gallery-overlay-text">Ver Proyecto</span>
-            </div>
-            <div class="gallery-info">
-                <h3 class="gallery-info-title">Dashboard de Analíticas</h3>
-                <p class="gallery-info-description">Visualización de datos interactiva y eficiente.</p>
-            </div>
-        </div>
-        <div class="gallery-item">
-            <img src="https://placehold.co/300/EF4444/ffffff?text=Marketing" alt="Imagen de la Galería 6" class="gallery-image">
-            <div class="gallery-overlay">
-                <span class="gallery-overlay-text">Ver Proyecto</span>
-            </div>
-            <div class="gallery-info">
-                <h3 class="gallery-info-title">Campaña de Marketing Digital</h3>
-                <p class="gallery-info-description">Estrategias de SEO y SEM para crecimiento.</p>
-            </div>
-        </div>
-    </div>
+<section id="proyectos" class="gallery-section" aria-labelledby="gallery-title">
+  <div class="gallery-header">
+    <h2 id="gallery-title" class="gallery-title">Galería de proyectos</h2>
+    <p class="gallery-subtitle">
+      Una muestra de los productos digitales en los que he participado, desde prototipos hasta soluciones en producción.
+    </p>
+  </div>
+
+  <div class="gallery-grid">
+    <article class="gallery-item" *ngFor="let project of projects">
+      <figure class="gallery-figure">
+        <img
+          [src]="project.image"
+          [alt]="project.alt"
+          class="gallery-image"
+          loading="lazy"
+          decoding="async"
+        />
+        <figcaption class="gallery-overlay">
+          <span class="gallery-overlay-text">Ver proyecto</span>
+        </figcaption>
+      </figure>
+      <div class="gallery-info">
+        <h3 class="gallery-info-title">{{ project.title }}</h3>
+        <p class="gallery-info-description">{{ project.description }}</p>
+      </div>
+    </article>
+  </div>
 </section>

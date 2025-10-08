@@ -1,94 +1,118 @@
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000; /* Asegura que el modal esté por encima de otros elementos */
-    animation: fadeIn 0.3s ease-out;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1.5rem;
+  animation: fadeIn 0.25s ease-out;
 }
 
 .modal-content {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 0.75rem;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    position: relative;
-    max-width: 90%; /* Responsivo: 90% del ancho */
-    width: 500px; /* Ancho máximo */
-    text-align: center;
-    animation: slideInFromTop 0.3s ease-out;
+  position: relative;
+  width: min(32rem, 100%);
+  background: #ffffff;
+  border-radius: 1.5rem;
+  padding: 2.5rem 2.25rem 2rem;
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.35);
+  animation: slideIn 0.3s ease-out;
 }
 
 .modal-close-button {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    font-weight: bold;
-    cursor: pointer;
-    color: #4a5568;
-    transition: color 0.2s ease-in-out;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(148, 163, 184, 0.15);
+  color: #0f172a;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.modal-close-button:hover {
-    color: #2d3748;
+.modal-close-button:hover,
+.modal-close-button:focus {
+  background-color: rgba(37, 99, 235, 0.15);
+  transform: scale(1.05);
 }
 
 .modal-title {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #1a202c;
-    margin-bottom: 1rem;
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 1rem;
 }
 
 .modal-description {
-    font-size: 1rem;
-    color: #4a5568;
-    margin-bottom: 1.5rem;
-    line-height: 1.5;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 1.75rem;
 }
 
 .contact-details {
-    text-align: left;
-    margin-top: 1.5rem;
-    padding: 0 1rem;
+  margin: 0;
+  padding: 0;
 }
 
-.contact-details p {
-    margin-bottom: 0.75rem;
-    font-size: 0.95rem;
-    color: #2d3748;
+.contact-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.25rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.25);
 }
 
-.contact-details strong {
-    color: #2563eb;
+.contact-item:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
-.contact-details a {
-    color: #2563eb;
-    text-decoration: none;
-    transition: color 0.2s ease-in-out;
+.contact-label {
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 0.95rem;
 }
 
-.contact-details a:hover {
-    text-decoration: underline;
-    color: #1d4ed8;
+.contact-value {
+  margin: 0;
+  font-size: 0.95rem;
 }
 
-/* Animaciones */
+.contact-value a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-value a:hover,
+.contact-value a:focus {
+  text-decoration: underline;
+}
+
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
-@keyframes slideInFromTop {
-    from { transform: translateY(-50px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

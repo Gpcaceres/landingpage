@@ -1,5 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
-import { CommonModule } from '@angular/common'; // Necesario para *ngIf si lo usaras dentro del modal
+
+type ContactLink = {
+  label: string;
+  value: string;
+  href?: string;
+};
 
 @Component({
   selector: 'app-contact-modal',
@@ -9,11 +15,19 @@ import { CommonModule } from '@angular/common'; // Necesario para *ngIf si lo us
   styleUrls: ['./contact-modal.css']
 })
 export class ContactModal {
-  // Emite un evento cuando el modal debe cerrarse
   @Output() closeModal = new EventEmitter<void>();
 
-  // Método para cerrar el modal
-  onCloseClick() {
+  protected readonly contactLinks: ContactLink[] = [
+    { label: 'Teléfono', value: '+593 99 609 2810', href: 'tel:+593996092810' },
+    {
+      label: 'LinkedIn',
+      value: 'linkedin.com/in/german-caceres',
+      href: 'https://www.linkedin.com/in/german-caceres'
+    },
+    { label: 'GitHub', value: 'github.com/Gpcaceres', href: 'https://github.com/Gpcaceres' }
+  ];
+
+  protected onCloseClick(): void {
     this.closeModal.emit();
   }
 }

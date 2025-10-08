@@ -1,15 +1,38 @@
-<div class="modal-overlay">
+<div
+  class="modal-overlay"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="contact-modal-title"
+>
   <div class="modal-content">
-    <button class="modal-close-button" (click)="onCloseClick()">X</button>
-    <h2 class="modal-title">Información de Contacto Adicional</h2>
+    <button
+      class="modal-close-button"
+      type="button"
+      (click)="onCloseClick()"
+      aria-label="Cerrar ventana de contacto"
+    >
+      ×
+    </button>
+    <h2 id="contact-modal-title" class="modal-title">Información de contacto</h2>
     <p class="modal-description">
-      ¡Gracias por tu interés! Aquí puedes encontrar más detalles para contactarme.
+      ¡Gracias por tu interés! Puedes utilizar cualquiera de los siguientes medios para comunicarte conmigo.
     </p>
-    <div class="contact-details">
-      
-      <p><strong>Teléfono:</strong> +593 99 609 2810</p>
-      <p><strong>LinkedIn:</strong> <a href="[https://www.linkedin.com/in/german-caceres-profile](https://www.linkedin.com/in/german-caceres-profile)" target="_blank">[linkedin.com/in/german-caceres-profile](https://linkedin.com/in/german-caceres-profile)</a></p>
-      <p><strong>GitHub:</strong> <a href="[https://github.com/Gpcaceres](https://github.com/german-caceres-dev)" target="_blank">[github.com/german-caceres-dev](https://github.com/Gpcaceres)</a></p>
-    </div>
+
+    <dl class="contact-details">
+      <div class="contact-item" *ngFor="let link of contactLinks">
+        <dt class="contact-label">{{ link.label }}</dt>
+        <dd class="contact-value">
+          <a
+            *ngIf="link.href; else plainText"
+            [href]="link.href"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {{ link.value }}
+          </a>
+          <ng-template #plainText>{{ link.value }}</ng-template>
+        </dd>
+      </div>
+    </dl>
   </div>
 </div>
