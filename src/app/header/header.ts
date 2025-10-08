@@ -11,4 +11,13 @@ import { Component } from '@angular/core';
 export class Header {
   protected readonly logoImage = 'assets/images/Logo_ESPE.png';
   protected readonly logoAlt = 'Logotipo de la Universidad de las Fuerzas Armadas ESPE';
+  protected isMenuOpen = false;
+
+  protected toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  protected closeMenu(): void {
+    this.isMenuOpen = false;
+  }
 }
