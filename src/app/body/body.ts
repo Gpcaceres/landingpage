@@ -26,7 +26,7 @@ export class Body {
       'En esta página encontrarás información sobre mi experiencia, habilidades técnicas y algunos de los proyectos en los que he participado.'
   };
 
-  protected readonly profileImage = 'assets/images/fotoPerfil.jpg';
+  protected readonly profileImage = "assets/images/fotoPerfil.jpg";
 
   protected readonly services: Service[] = [
     {
@@ -45,7 +45,7 @@ export class Body {
       title: 'Bases de Datos',
       summary: 'Modelado, optimización y mantenimiento de soluciones de datos relacionales y no relacionales.',
       iconClass: 'service-icon--database',
-      skills: ['MySQL', 'MongoDB', 'PostgreSQL', 'Prisma']
+      skills: ['MySQL', 'MongoDB', 'PostgreSQL']
     }
   ];
 
