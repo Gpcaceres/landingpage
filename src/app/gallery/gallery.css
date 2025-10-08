@@ -1,0 +1,203 @@
+.gallery-section {
+    padding: 2.5rem 1.5rem; /* Reducido el padding-top para menor espacio */
+    background-color: #f3f4f6;
+    width: auto; /* Corregido de 'auto' a '100%' */
+}
+
+@media (min-width: 640px) { /* sm breakpoint */
+    .gallery-section {
+        padding: 3.5rem 2.5rem;
+    }
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+    .gallery-section {
+        padding: 4.5rem 3.5rem;
+    }
+}
+
+@media (min-width: 1024px) { /* lg breakpoint */
+    .gallery-section {
+        padding: 5.5rem 4.5rem;
+    }
+}
+
+.gallery-title {
+    font-size: 2.2rem; /* Reducido el tamaño base para móvil */
+    font-weight: 700;
+    text-align: center;
+    color: #1a202c;
+    margin-bottom: 2.5rem; /* Reducido el margen inferior */
+    margin-top: -4rem; 
+}
+
+@media (min-width: 640px) { /* sm breakpoint */
+    .gallery-title {
+        font-size: 2.8rem;
+    }
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+    .gallery-title {
+        font-size: 3.2rem;
+    }
+}
+
+@media (min-width: 1024px) { /* lg breakpoint */
+    .gallery-title {
+        font-size: 3.8rem;
+    }
+}
+
+.gallery-grid {
+    max-width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem; /* Aumentado el gap */
+}
+
+@media (min-width: 640px) { /* sm breakpoint */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem; /* Aumentado el gap */
+    }
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem; /* Aumentado el gap */
+    }
+}
+
+@media (min-width: 1024px) { /* lg breakpoint */
+    .gallery-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.gallery-item {
+    background-color: #fff;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(0);
+}
+
+.gallery-item:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    transform: translateY(-0.25rem);
+}
+
+.gallery-image {
+    width: 100%;
+    height: 12rem; /* Reducido el tamaño base para móvil */
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+@media (min-width: 640px) { /* sm breakpoint */
+    .gallery-image {
+        height: 14rem; /* Reducido para pantallas pequeñas */
+    }
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+    .gallery-image {
+        height: 16rem; /* Reducido para pantallas medianas */
+    }
+}
+
+.gallery-item:hover .gallery-image {
+    transform: scale(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-overlay-text {
+    color: #fff;
+    font-size: 1rem; /* Reducido el tamaño base para móvil */
+    font-weight: 600;
+}
+
+@media (min-width: 640px) { /* sm breakpoint */
+    .gallery-overlay-text {
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+    .gallery-overlay-text {
+        font-size: 1.6rem;
+    }
+}
+
+.gallery-info {
+    padding: 1rem; /* Reducido el padding */
+}
+
+@media (min-width: 640px) { /* sm breakpoint */
+    .gallery-info {
+        padding: 1.2rem;
+    }
+}
+
+.gallery-info-title {
+    font-size: 1.1rem; /* Reducido el tamaño base para móvil */
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 0.5rem; /* Reducido el margen inferior */
+}
+
+@media (min-width: 640px) { /* sm breakpoint */
+    .gallery-info-title {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+    .gallery-info-title {
+        font-size: 1.3rem;
+    }
+}
+
+.gallery-info-description {
+    color: #4a5568;
+    font-size: 0.8rem; /* Reducido el tamaño base para móvil */
+}
+
+@media (min-width: 640px) { /* sm breakpoint */
+    .gallery-info-description {
+        font-size: 0.9rem;
+    }
+}
+
+/* --- ANIMATION --- */
+@keyframes fadeInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

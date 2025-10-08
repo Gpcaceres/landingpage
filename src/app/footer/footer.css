@@ -1,0 +1,146 @@
+.footer {
+  background-color: #1a202c; /* bg-gray-900 */
+  color: #fff;
+  padding: 2.5rem 1rem; /* py-10 px-4 */
+  width: 100%; /* w-full */
+  overflow: hidden; /* Previene bordes sobresalientes */
+  box-sizing: border-box; /* Incluye padding en el ancho */
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.footer-inner {
+  width: 100%;
+  max-width: 80rem; /* max-w-7xl */
+  margin: 0 auto;
+  border-top-left-radius: 0.75rem; /* moved aquí */
+  border-top-right-radius: 0.75rem; /* moved aquí */
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .footer-content {
+    flex-direction: row;
+    text-align: left;
+    gap: 0;
+  }
+}
+
+.brand-info {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .brand-info {
+    margin-bottom: 0;
+  }
+}
+
+.brand-name {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.copyright-text,
+.design-credit {
+  color: #a0a7b5;
+  font-size: 0.875rem;
+}
+
+.heart-icon {
+  color: #ef4444;
+}
+
+.footer-links-social {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .footer-links-social {
+    flex-direction: row;
+    gap: 3rem;
+    margin-left: auto;
+  }
+}
+
+.quick-links,
+.social-media {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .quick-links,
+  .social-media {
+    text-align: left;
+  }
+}
+
+.links-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.quick-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.quick-links a {
+  color: #a0a7b5;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.quick-links a:hover {
+  color: #93c5fd;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .social-icons {
+    justify-content: flex-start;
+  }
+}
+
+.social-icon-link {
+  color: #a0a7b5;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1);
+}
+
+.social-icon-link:hover {
+  color: #60a5fa;
+  transform: scale(1.1);
+}
+
+.icon-size {
+  width: 1.75rem;
+  height: 1.75rem;
+}
